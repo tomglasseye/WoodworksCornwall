@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -10,23 +10,10 @@ const Home = ({ data }) => {
 
       <SEO title="Home Page" />
 
-      <h1>{data.wpPage.title}</h1> Boom
-
-      <div dangerouslySetInnerHTML={{ __html: data.wpPage.content }} />
+      <h1>Hello</h1> Boom
 
     </Layout>
   )
 }
 
 export default Home
-
-export const pageQuery = graphql`
-  query {
-    wpPage(uri: {eq: "/"}) {
-        id
-        databaseId
-        title
-        content
-    }
-  }
-`
