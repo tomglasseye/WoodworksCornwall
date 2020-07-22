@@ -3,12 +3,12 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Home = ({ data }) => {
+const Page = ({ data }) => {
 
   return (
     <Layout>
 
-      <SEO title="Home Page" />
+      <SEO title={data.wpPage.title} />
 
       <h1>{data.wpPage.title}</h1>
 
@@ -18,11 +18,11 @@ const Home = ({ data }) => {
   )
 }
 
-export default Home
+export default Page
 
 export const pageQuery = graphql`
-  query {
-    wpPage(uri: {eq: "/"}) {
+  query($id: String!) {
+    wpPage(id: { eq: $id }) {
         id
         databaseId
         title

@@ -13,6 +13,12 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-wordpress-experimental`,
+      options: {
+        url: `http://woodworkscornwall.happycyb.org/graphql`
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
