@@ -8,9 +8,9 @@ const Home = ({ data }) => {
   return (
     <Layout>
 
-      <SEO title="Home Page" />
+      <SEO title="Welcome" />
 
-      <h1>Hello</h1> Boom
+      <h1>Coming Soon!</h1>
 
     </Layout>
   )
