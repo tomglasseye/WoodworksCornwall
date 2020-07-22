@@ -10,7 +10,7 @@ const Home = ({ data }) => {
 
       <SEO title="Home Page" />
 
-      <h1>{data.wpPage.title}</h1>
+      <h1>{data.wpPage.title}</h1> Boom
 
       <div dangerouslySetInnerHTML={{ __html: data.wpPage.content }} />
 
